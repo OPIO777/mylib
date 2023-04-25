@@ -1,0 +1,39 @@
+<html>
+{% include 'base.html' %}
+ <center><h1>{{title}}</h1></center>
+ <table>
+     <thead>
+         <tr>
+             <td>STUDENT_NAME</td>
+             <td>STUDENT_NUMBER</td>
+             <td>NAME</td>
+             <td>ISBN</td>
+             <td>AUTHOR</td>
+             <td>CATEGORY</td>
+             <td>SUBJECT</td>
+             <td>ISSUE_DATE</td>
+             <td>EXPIRY_DATE</td>
+
+
+         </tr>
+     </thead>
+
+     <tbody>
+     {% for K in queryset %}
+         <tr>
+             <td>{{ K.student_name }}</td>
+             <td>{{ K.student_number }}</td>
+             <td>{{ K.name }}</td>
+             <td>{{ K.isbn }}</td>
+             <td>{{ K.author }}</td>
+             <td>{{ K.category }}</td>
+             <td>{{ K.subject_area }}</td>
+             <td>{{ K.issue_date }}</td>
+             <td>{{ K.expiry_date }}</td>
+
+
+         </tr>
+
+     </tbody>
+{% endfor %}
+ </table>

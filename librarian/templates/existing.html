@@ -1,0 +1,31 @@
+<html>
+{% include 'base.html' %}
+ <center><h1>{{title}}</h1></center>
+ <table>
+     <thead>
+         <tr>
+             <td>NAME</td>
+             <td>ISBN</td>
+             <td>AUTHOR</td>
+             <td>CATEGORY</td>
+             <td>SUBJECT</td>
+         </tr>
+     </thead>
+
+     <tbody>
+     {% for K in queryset %}
+         <tr>
+
+             <td>{{ K.name }}</td>
+             <td>{{ K.isbn }}</td>
+             <td>{{ K.author }}</td>
+             <td>{{ K.category }}</td>
+             <td>{{ K.subject_area }}</td>
+         </tr>
+     {% endfor %}
+     </tbody>
+
+ </table>
+
+
+</html>

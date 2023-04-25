@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html>
+ {% include 'base.html' %}
+ <center><h1>{{title}}</h1></center>
+<form method = 'post' >{%csrf_token%}
+     {{form.as_p}}
+     <button type = "Submit">Delete</button>
+</form>
+</html>
